@@ -1,8 +1,9 @@
 <h3>Visitors Login System</h3>
 ===============================
-Need to install first :
+<pre>
     a. git (https://git-scm.com/downloads)
     b. composer (https://getcomposer.org/download/)
+</pre>
 Step 1. Pull from your directory
 <pre>
 cd <\path\to\your\directory>
