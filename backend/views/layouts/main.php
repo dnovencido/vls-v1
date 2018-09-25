@@ -35,11 +35,9 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-    ];
+
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'Login', 'url' => ['../user/login']];
         $nav = "";
     } else {
         $menuItems[] = '<li>'
@@ -60,21 +58,20 @@ AppAsset::register($this);
     ?>
 
     <div class="container">
+
+    <?php if(!Yii::$app->user->isGuest) { ?>
         <h3>VLS Control Panel</h3>
         <div class="navigation-menu">
             <?= $nav ?>
         </div>
         <div class="card">
             <?= Breadcrumbs::widget([
-                // 'homeLink' => [
-                //     'label' => 'Dashboard',
-                //     'url' => ['site/index'],
-                // ],               
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
-
             <?= Alert::widget() ?> 
         </div>
+    <?php } ?>
+        
         <?php (Yii::$app->controller->action->id == 'login') ? $className = "login" : $className = "card"; ?>
         <div class="<?= $className?>">    
             <?= $content ?>

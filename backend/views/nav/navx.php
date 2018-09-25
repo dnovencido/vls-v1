@@ -23,11 +23,11 @@ if(array_key_exists('Super Administrator', $userRole)){
     ];
 } else {
     $menuItems = [
-        ['label' => '<span class="glyphicon glyphicon-list-alt"></span> Dashboard', 'url' => ['/site/index']],
-        ['label' => '<span class="glyphicon glyphicon-book"></span> Employee Records', 'url' => '#'],   
-        ['label' => '<span class="glyphicon glyphicon-home"></span> Offices', 'url' => '#'],
-        '<li class="divider"></li>',
+
+        ['label' => '<span class="glyphicon glyphicon-list-alt"></span> Dashboard', 'url' => ['/site/index'], 'active' => in_array(\Yii::$app->controller->id, ['site']),],
+        ['label' => '<span class="glyphicon glyphicon-book"></span> Employee Records','url' => ['/employee/index'], 'active' => in_array(\Yii::$app->controller->id, ['employee'])],   
         //['label' => 'Separated link', 'url' => '#'],
+        
     ];
 }
 

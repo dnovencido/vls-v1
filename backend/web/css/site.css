@@ -200,3 +200,14 @@ a.desc:after {
 .intl-tel-input{
     width: 100%;
 }
+
+.login-image {
+    width: 85px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    margin-top: 30px;
+}
