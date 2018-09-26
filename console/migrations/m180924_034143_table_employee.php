@@ -12,7 +12,7 @@ class m180924_034143_table_employee extends Migration
      */
     public function safeUp()
     {
-        $tables = Yii::$app->db->schema->getTableNames();ß  
+        $tables = Yii::$app->db->schema->getTableNames();
         $dbType = $this->db->driverName;
         $tableOptions_mysql = "CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB";
         $tableOptions_mssql = "";
