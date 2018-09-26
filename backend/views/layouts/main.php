@@ -29,8 +29,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Html::img('@web/assets/images/Fire_and_Emergency_New_Zealand_logo.png', ['alt'=>Yii::$app->name , 'class'=>'nav-logo']) ,
-        'brandUrl' => Yii::$app->homeUrl,
+        'brandLabel' => Html::img('https://upload.wikimedia.org/wikipedia/en/5/5e/Fire_and_Emergency_New_Zealand_logo.png', ['alt'=>Yii::$app->name , 'class'=>'nav-logo']) ,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],

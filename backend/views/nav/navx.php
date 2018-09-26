@@ -2,9 +2,8 @@
 use kartik\nav\NavX;
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
-
 $userRole = Yii::$app->authManager->getRolesByUser(Yii::$app->user->id);
+
 if(array_key_exists('Super Administrator', $userRole)){
     $menuItems = [
     
