@@ -3,9 +3,9 @@
 use yii\db\Migration;
 
 /**
- * Class m180915_142412_added_fields
+ * Class m180926_115023_add_fields
  */
-class m180915_142412_added_fields extends Migration
+class m180926_115023_add_fields extends Migration
 {
     /**
      * {@inheritdoc}
@@ -78,6 +78,5 @@ class m180915_142412_added_fields extends Migration
         echo "m180915_142412_added_fields cannot be reverted.\n";
 
         return false;
-    }
-    */
+    } */
 }
