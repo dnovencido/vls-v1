@@ -18,7 +18,7 @@ class OfficeSearch extends Office
     public function rules()
     {
         return [
-            [['id', 'office_desc'], 'integer'],
+            [['office_desc'], 'safe'],
         ];
     }
 
@@ -58,7 +58,6 @@ class OfficeSearch extends Office
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
             'office_desc' => $this->office_desc,
         ]);
 

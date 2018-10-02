@@ -20,7 +20,7 @@ use yii\helpers\ArrayHelper;
 
             <?= $form->field($model, 'lname')->textInput() ?>
 
-            <?= $form->field($model, 'address')->textarea(['rows' => '4']) ?>
+            <?= $form->field($model, 'email')->textInput() ?>
         </div>
         <div class="col-sm-6">
             <?= $form->field($model, 'office')->widget(Select2::classname(), [
@@ -32,15 +32,9 @@ use yii\helpers\ArrayHelper;
                     ],
                 ]);
             ?>
-            <?= $form->field($model, 'position')->widget(Select2::classname(), [
-                    'data' => ArrayHelper::map($position, 'id', 'position_desc'),
-                    'language' => 'en',
-                    'options' => ['placeholder' => 'Select office ...'],
-                    'pluginOptions' => [
-                        'allowClear' => true
-                    ],
-                ]);
-            ?>            
+            
+            <?= $form->field($model, 'position')->textInput() ?>     
+
             <?=
                 $form->field($model, 'mobile_no')->widget(PhoneInput::className(), [
                     'jsOptions' => [

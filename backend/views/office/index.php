@@ -12,23 +12,25 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="office-index">
 
-    <?php Pjax::begin(); ?>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
         <?= Html::a('Create Office', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+    <?php Pjax::begin(); ?>
 
-            'office_desc',
+        <?= GridView::widget([
+            'dataProvider' => $dataProvider,
+            'filterModel' => $searchModel,
+            'columns' => [
+                ['class' => 'yii\grid\SerialColumn'],
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+                'office_desc',
+
+                ['class' => 'yii\grid\ActionColumn'],
+            ],
+        ]); ?>
+    
     <?php Pjax::end(); ?>
 </div>

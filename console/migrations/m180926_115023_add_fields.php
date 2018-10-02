@@ -14,7 +14,7 @@ class m180926_115023_add_fields extends Migration
     {
         $this->addColumn('profile', 'fname', $this->string());
         $this->addColumn('profile', 'lname', $this->string());
-        $this->addColumn('profile', 'position_id', $this->integer());
+        $this->addColumn('profile', 'position', $this->string());
         $this->addColumn('profile', 'office_id', $this->integer());
 
         //Add foreign key table `office`
@@ -23,16 +23,6 @@ class m180926_115023_add_fields extends Migration
             'profile',
             'office_id',
             'office',
-            'id',
-            'CASCADE'
-        );
-
-        //Add foreign key table `position`
-        $this->addForeignKey(
-            'fk-position-id',
-            'profile',
-            'position_id',
-            'position',
             'id',
             'CASCADE'
         );
@@ -47,13 +37,6 @@ class m180926_115023_add_fields extends Migration
         $this->dropColumn('profile', 'lname');
         $this->dropColumn('profile', 'position');
         $this->dropColumn('profile', 'office');
-
-
-        // drops foreign key for table `position`
-        $this->dropForeignKey(
-            'fk-position-id',
-            'position'
-        );
 
         // drops foreign key for table `office`
         $this->dropForeignKey(

@@ -5,7 +5,6 @@ namespace backend\controllers;
 use Yii;
 use backend\models\Employee;
 use backend\models\Office;
-use backend\models\Position;
 use backend\models\EmployeeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -72,7 +71,6 @@ class EmployeeController extends Controller
     {
         $model = new Employee();
         $office = Office::find()->all();
-        $position = Position::find()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -80,7 +78,6 @@ class EmployeeController extends Controller
 
         return $this->render('create', [
             'model' => $model,
-            'position' => $position,
             'office' => $office
         ]);
     }
@@ -96,7 +93,6 @@ class EmployeeController extends Controller
     {
         $model = $this->findModel($id);
         $office = Office::find()->all();
-        $position = Position::find()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -105,7 +101,6 @@ class EmployeeController extends Controller
         return $this->render('update', [
             'model' => $model,
             'office' => $office,
-            'position' => $position
         ]);
     }
 

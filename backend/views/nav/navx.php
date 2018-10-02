@@ -14,9 +14,7 @@ if(array_key_exists('Super Administrator', $userRole)){
                 ['label' => 'Permissions', 'url' => ['rbac/permission/index']],
             ]],
             ['label' => '<span class="glyphicon glyphicon-book"></span> Employee Records','url' => ['/employee/index'], 'active' => in_array(\Yii::$app->controller->id, ['employee'])],   
-            ['label' => '<span class="glyphicon glyphicon-home"></span> Offices', 'url' => ['/office/index'], 'active' => in_array(\Yii::$app->controller->id, ['office']),],
-            ['label' => '<span class="glyphicon glyphicon-folder-open"></span> Positions', 'url' => ['/position/index'], 'active' => in_array(\Yii::$app->controller->id,['position']),],
-            '<li class="divider"></li>',
+            ['label' => '<span class="glyphicon glyphicon-home"></span> Offices', 'url' => ['/office/index'], 'active' => in_array(\Yii::$app->controller->id, ['office']),]
             //['label' => 'Separated link', 'url' => '#'],
         
     ];

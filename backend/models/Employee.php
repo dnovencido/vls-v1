@@ -34,10 +34,10 @@ class Employee extends \yii\db\ActiveRecord
         return [
             [['fname'], 'string', 'max' => 55],
             [['lname'], 'string', 'max' => 65],
-            [['address'], 'string', 'max' => 155],
+            ['email', 'email'],
             [['fname', 'lname', 'address'], 'trim'],
-            [['fname', 'lname', 'address', 'office', 'position', 'mobile_no'], 'required'],
-            [['office', 'position'], 'integer'],
+            [['fname', 'lname', 'office', 'position', 'mobile_no'], 'required'],
+            [['office'], 'integer'],
             [['mobile_no'], 'string'],
             [['mobile_no'], PhoneInputValidator::className()],            
         ];
@@ -73,11 +73,6 @@ class Employee extends \yii\db\ActiveRecord
     public function getOfficeTable()
     {
         return $this->hasOne(Office::className(), ['id' => 'office']);
-    }
-
-    public function getPositionName()
-    {
-        return $this->positionTable->position_desc;
     }
 
     public function getOfficeName()

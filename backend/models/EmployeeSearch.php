@@ -15,10 +15,13 @@ class EmployeeSearch extends Employee
     /**
      * {@inheritdoc}
      */
+    public $office_name;
+
     public function rules()
     {
         return [
-            [['id', 'fname', 'lname', 'address', 'office', 'position', 'mobile_no'], 'integer'],
+            [['fname', 'lname', 'address', 'email', 'position', 'mobile_no'], 'safe'],
+            ['office', 'safe']
         ];
     }
 
@@ -61,7 +64,7 @@ class EmployeeSearch extends Employee
             'id' => $this->id,
             'fname' => $this->fname,
             'lname' => $this->lname,
-            'address' => $this->address,
+            'email' => $this->email,
             'office' => $this->office,
             'position' => $this->position,
             'mobile_no' => $this->mobile_no,

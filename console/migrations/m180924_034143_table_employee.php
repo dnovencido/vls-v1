@@ -29,21 +29,17 @@ class m180924_034143_table_employee extends Migration
                     'fname' => 'VARCHAR(55) NULL',
                     'lname' => 'VARCHAR(55) NULL',
                     'address' => 'VARCHAR(255) NULL',
+                    'email' => 'VARCHAR(55) NULL',
                     'office' => 'INT(11) NULL',
-                    'position' => 'INT(11) NULL',
+                    'position' => 'VARCHAR(255) NULL',
                     'mobile_no' => 'VARCHAR(255) NULL',
                 ], $tableOptions_mysql);
             }
         }
-         
-         
-        $this->createIndex('idx_position_46_00','employee','position',0);
         
         $this->createIndex('idx_office_46_01','employee','office',0);
          
         $this->execute('SET foreign_key_checks = 0');
-        
-        $this->addForeignKey('fk_position_46_00','{{%employee}}', 'position', '{{%position}}', 'id', 'CASCADE', 'NO ACTION' );
         
         $this->addForeignKey('fk_office_46_01','{{%employee}}', 'office', '{{%office}}', 'id', 'CASCADE', 'NO ACTION' );
         
