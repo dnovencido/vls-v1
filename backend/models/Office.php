@@ -28,7 +28,8 @@ class Office extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['office_desc'], 'string', 'max' => 255],
+            [['office_desc'], 'string', 'max' => 255, ],
+            ['office_desc', 'required']
         ];
     }
 

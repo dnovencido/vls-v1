@@ -15,7 +15,11 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'office_desc')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <div class="row">
+            <div class="col-sm-2 pull-right">
+                <?= Html::submitButton('Save', ['class' => 'btn btn-success btn-block']) ?>
+            </div>
+        </div>
     </div>
 
     <?php ActiveForm::end(); ?>
