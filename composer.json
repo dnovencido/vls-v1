@@ -35,8 +35,8 @@
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "fxp/composer-asset-plugin": "^1.4",
-        "dektrium/yii2-user": "*",
-        "dektrium/yii2-rbac": "*",
+        "dektrium/yii2-user": "dev-master",
+        "dektrium/yii2-rbac": "dev-master",
         "kartik-v/yii2-nav-x": "dev-master",
         "kartik-v/yii2-widget-select2": "@dev",
         "2amigos/yii2-highcharts-widget": "~1.0",
@@ -60,6 +60,36 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dektrium/yii2-rbac",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/dnovencido/yii2-rbac.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "classmap": [""]
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dektrium/yii2-user",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/dnovencido/yii2-user.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "classmap": [""]
+                }
+            }
+        }              
     ]
 }
