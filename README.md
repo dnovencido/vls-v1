@@ -28,7 +28,7 @@ Step 4. Update vendors
 <pre>
 composer update
 </pre>
-Step 5. Create your own database and name it as "tbl_vls" then run
+Step 5. Create your own database and name it as "db_vls" then run
 <pre>
     a. php yii migrate/up --migrationPath=@vendor/dektrium/yii2-user/migrations
     b. php yii migrate/up --migrationPath=@yii/rbac/migrations
