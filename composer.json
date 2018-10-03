@@ -14,6 +14,10 @@
     },
     "repositories": [
         {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },        
+        {
             "type": "vcs",
             "url": "https://github.com/dnovencido/yii2-user.git"
         },     
@@ -45,6 +49,9 @@
         "codeception/verify": "~0.3.1"
     },
     "config": {
-        "process-timeout": 1800
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        }
     }
 }
