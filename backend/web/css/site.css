@@ -211,3 +211,8 @@ a.desc:after {
 .login-form {
     margin-top: 30px;
 }
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: #eee;
+    border-bottom-color: #e53935 !important;
+}
