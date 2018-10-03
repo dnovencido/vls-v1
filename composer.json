@@ -1,7 +1,7 @@
 {
     "name": "Visitors Login System",
-    "description": "Web Application System for FENZ",
-    "keywords": ["yii2", "framework", "advanced", "project template"],
+    "description": "Web Application For FENZ",
+    "keywords": ["visitor login system", "web application", "fenz"],
     "homepage": "http://www.yiiframework.com/",
     "type": "project",
     "license": "BSD-3-Clause",
@@ -12,6 +12,16 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/dnovencido/yii2-user.git"
+        },     
+        {
+            "type": "vcs",
+            "url": "https://github.com/dnovencido/yii2-rbac.git"
+        }           
+    ],
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
@@ -36,44 +46,12 @@
     },
     "config": {
         "process-timeout": 1800,
-        "fxp-asset": {
-            "enabled": false
-        }
+        "secure-http":false
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "dektrium/yii2-user",
-                "version": "dev-master",
-                "source": {
-                    "url": "https://github.com/dnovencido/yii2-user.git",
-                    "type": "git",
-                    "reference": "master"
-                },
-                "autoload": {
-                    "classmap": [""]
-                }
-            }
-        },      
-        {
-            "type": "package",
-            "package": {
-                "name": "dektrium/yii2-rbac",
-                "version": "dev-master",
-                "source": {
-                    "url": "https://github.com/dnovencido/yii2-rbac.git",
-                    "type": "git",
-                    "reference": "master"
-                },
-                "autoload": {
-                    "classmap": [""]
-                }
-            }
-        }           
-    ]
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
 }
