@@ -18,7 +18,7 @@ Step 3. Setup your database in common\config\main-local.php
 'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=tbl_vls',
+            'dsn' => 'mysql:host=localhost;dbname=dbl_vls',
             'username' => 'root',
             'password' => '',
             'charset' => 'utf8',
