@@ -39,7 +39,8 @@
         "kartik-v/yii2-widget-select2": "@dev",
         "2amigos/yii2-highcharts-widget": "~1.0",
         "borales/yii2-phone-input": "*",
-        "c006/yii2-migration-utility": "dev-master"
+        "c006/yii2-migration-utility": "dev-master",
+        "macgyer/yii2-materializecss": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
